@@ -1,0 +1,61 @@
+---
+layout: default
+title: Officers
+subtitle: Learn about your leadership
+permalink: /officers/
+---
+
+<div class="container officers">
+  <div class="row centered">
+    {% for officer in site.data.officers %}
+    <div class="col-lg-3 col-md-3 col-sm-6 officer">
+      <div class="avatar-container" href="#{{ officer.modal }}Modal" data-toggle="modal">
+        <img class="img-circle" src="{{ site.baseurl }}/img/officers/{{ officer.pic }}.jpg" />
+        <h4>{{ officer.name }}</h4>
+        <h5>{{ officer.position }}</h5>
+      </div>
+      <p>
+        {% for network in officer.social %}
+        <a href="{{ network.url }}">
+          <i class="fa fa-{{ network.title }}"></i>
+        </a>
+        {% endfor %}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% for officer in site.data.officers %}
+<div class="modal fade" id="{{ officer.modal }}Modal" tabindex="-1" role="dialog" aria-labelledby="{{ officer.modal }}Modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img class="img-circle" src="{{ site.baseurl }}/img/officers/{{ officer.pic }}.jpg" />
+        <div class="officer-title">
+          <h1>{{ officer.name }}</h1>
+          <h3>{{ officer.position }}
+            <span class="modal-links">
+              {% for network in officer.social %}
+              <a href="{{ network.url }}">
+                <i class="fa fa-{{ network.title }}"></i>
+              </a>
+              {% endfor %}
+            </span>
+          </h3>
+        </div>
+        <p class="modal-description"><b>Year: </b>{{ officer.year }} Year</p>
+        <p class="modal-description"><b>Major: </b>{{ officer.major }}</p>
+        <p class="modal-description"><b>Favorite Breakfast Food: </b>{{ officer.breakfast }}</p>
+        <p class="modal-description"><b>Favorite Style of Socks: </b>{{ officer.socks }}</p>
+        <p class="modal-description"><b>How I believe a dog would wear pants:</b></p>
+        <img src="{{ site.baseurl }}/img/dog-pants/dog-pants-{{ officer.dog }}.gif"/>
+
+      </div> 
+    </div>
+  </div>
+</div>
+{% endfor %}
