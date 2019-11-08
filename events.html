@@ -1,0 +1,52 @@
+---
+layout: default
+title: Events
+subtitle: Keep up with all of our events!
+permalink: /events/
+---
+
+<div id="meetings">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>Weekly Meetings</h2>
+      </div>
+    </div>
+    <div class="row centered">
+      <br>
+      <br>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-calendar-o"></i>Every Tuesday</h4>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-clock-o"></i>6:00pm - 7:00pm</h4>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-map-marker"></i>102 West Village G</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sched">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <ul class="dates">
+          {% for event in site.data.events limit:5 %}
+          <li>
+            <span class="date">{{ event.date | date: "%B" | truncate: 3, ""}}<strong>{{ event.date | date: "%-d" }}</strong></span>
+            <h3><a href="{{ event.url }}" target="_blank">{{ event.title }}</a></h3>
+            <p class="event-date">{{ event.date }} @ {{ event.time }}<span class="event-location">{{ event.location }}</span></p>
+            <p>{{ event.description }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var events = {{ site.data.events | jsonify }};
+</script>
