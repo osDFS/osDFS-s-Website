@@ -1,0 +1,24 @@
+---
+layout: default
+title: Gallery
+subtitle: Photos
+permalink: /gallery/
+---
+
+<div id="gallery">
+  <div class="container">
+    <div class="row centered">
+      <br>
+      <br>
+      {% for photo in site.data.photos %}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a class="gallery-item" href="{{ photo.path }}">
+          <img class="cover" src="{{ photo.path }}">
+        </a>
+      </div>
+      {% endfor %}
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
