@@ -1,0 +1,18 @@
+#List events in chronological order
+#Remove events once they have occurred
+#Link to files using ../files/<fileName>
+#JSON:
+#-title: Name of opportunity
+#  click: Linkable Text
+#  url: Link to website/file with more details
+#  date: Date in the form: January 1st, 2018
+#  location: Where
+#  description: Important info ie overview, alternative deadlines, travel grants available
+
+- title: Opening Ceremoney
+  click: Know About osDFS
+  url: #
+  date:  December 10th, 2019
+  location: Not Available
+  description: osDFS will be live on 10th December. You should know about osDFS that what they provide.
+
