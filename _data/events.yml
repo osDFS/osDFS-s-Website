@@ -1,0 +1,11 @@
+# Add new events to the top
+# Events go from most recent -> least recent
+
+- title: Welcome Dinner
+  url: /events
+  start: "2019-12-10T19:00:00"
+  date: December 10, 2019
+  time: 7:00pm - 8:00pm
+  location: Not Available
+  description: Join osDFS for their annual welcome dinner! Enjoy some delicious (and free) food while mingling with fellow men & women in tech-related majors/fields!
+
