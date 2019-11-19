@@ -1,0 +1,50 @@
+
+- name: Rohit Rathore
+  position: Founder & President
+  modal: rohit
+  pic: Rohit
+  college: Birla Institute of Technology, Mesra
+  year: 2nd
+  major: Mathematics & Computing
+  breakfast: Chocolate chip pancakes 
+  socks: Fuzzy, with fun patterns on them
+  dog: 4
+  social:
+    - title: envelope
+      url: mailto:rohitrathore.imh55@gmail.com
+    - title: linkedin
+      url: https://www.linkedin.com/in/rohit-singh-rathaur/     
+    - title: github
+      url: https://github.com/TeAmp0is0N
+    - title: link
+      url: https://teamp0is0n.github.io/rohit-rathaur.github.io/
+
+- name: Md. Abdal Khan
+  position: Co-Founder & Vice Design Chair
+  modal: abdal 
+  pic: Abdal
+  college: Birla Institute of Technology, Mesra
+  year: 2nd
+  major: Mathematics & Computing
+  breakfast: Eggs (Hot or Hard Boiled)
+  socks: Fuzzy, with fun patterns on them
+  dog: 2
+  social: 
+    - title: envelope
+      url: mailto:abdl.bitmesra@gmail.com 
+    - title: linkedin
+      url: https://www.linkedin.com/in/md-abdal-khan-976192194/
+
+- name: Shubhendu Mishra
+  position: Treasurer & Content Chair
+  modal: shubhendu
+  pic: Shubhendu
+  college: Birla Institute of Technology, Mesra
+  year: 2nd
+  major: Mathematics & Computing
+  dog: 2
+  social: 
+    - title: envelope
+      url: mailto:mshubhendu9@gmail.com
+    - title: linkedin
+      url: https://www.linkedin.com/in/shubhendu-mishra-723145198/
