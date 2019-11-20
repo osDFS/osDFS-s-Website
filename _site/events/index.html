@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>osDFS | Tech Challenges</title>
+<title>osDFS | Events</title>
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="shortcut icon" href="/img/favicon.png" />
@@ -21,6 +21,9 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.css" rel="stylesheet" />
 
 
 <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" />
@@ -45,12 +48,12 @@
       <ul class="nav navbar-nav navbar-right">
         <li ><a href="/">Home</a></li>
         <li ><a href="/officers">Officers</a></li>
-        <li ><a href="/events">Events</a></li>
+        <li class="active"><a href="/events">Events</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opportunities <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li ><a href="/opportunities">All Opportunities</a></li>
-            <li class="active"><a href="/tech-challenge">Tech Challenges</a></li>
+            <li ><a href="/tech-challenge">Tech Challenges</a></li>
           </ul>
         </li>
         <li ><a href="/gallery">Gallery</a></li>
@@ -72,24 +75,46 @@
   <div class="container">
     <div class="row centered">
       <div class="col-lg-8 col-lg-offset-2">
-        <h2>Participate in osDFS's new technical interview challenges!</h2>
+        <h2>Keep up with all of our events!</h2>
       </div>
     </div>
   </div>
 </div>
 
-    <div id="opportunities">
+    <div id="meetings">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>Weekly Meetings</h2>
+      </div>
+    </div>
+    <div class="row centered">
+      <br>
+      <br>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-calendar-o"></i>Not Available</h4>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-clock-o"></i>Not Available</h4>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4><i class="fa fa-map-marker"></i>Not Available</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sched">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <ul class="dates">
           
           <li>
-            <span class="date">Jan<strong>22</strong></span>
-            <h3><strong style="color:teal;text-transform:uppercase;">Week 1</strong></h3>
-            <h4><a href="" target="_blank">Enter</a></h4>
-            <p class="event-date">January 22nd, 2020<span class="event-location">Not Available</span></p>
-            <p>Welcome to the first week of osDFS Technical Coding Challenges! We're here to help you to advance your career. You can submit you solution whether it is correct or not! Due <strong>January 22nd.</strong></p>
+            <span class="date">Dec<strong>10</strong></span>
+            <h3><a href="/events" target="_blank">osDFS Launching</a></h3>
+            <p class="event-date">December 10, 2019 @ 11:00am - 12:30pm<span class="event-location">Not Available</span></p>
+            <p>Join osDFS premier! Enjoy the event while mingling with fellow attendees in tech-related majors/fields!</p>
           </li>
           
         </ul>
@@ -99,7 +124,7 @@
 </div>
 
 <script>
-  var opportunities = [{"title":"<strong style=\"color:teal;text-transform:uppercase;\">Week 1</strong>","click":"Enter","url":null,"date":"January 22nd, 2020","location":"Not Available","description":"Welcome to the first week of osDFS Technical Coding Challenges! We're here to help you to advance your career. You can submit you solution whether it is correct or not! Due <strong>January 22nd.</strong>"}];
+  var events = [{"title":"osDFS Launching","url":"/events","start":"2019-12-10T19:00:00","date":"December 10, 2019","time":"11:00am - 12:30pm","location":"Not Available","description":"Join osDFS premier! Enjoy the event while mingling with fellow attendees in tech-related majors/fields!"}];
 </script>
 
     
@@ -139,6 +164,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.js"></script>
+<script src="/js/calendar.js"></script>
 
 <script src="/js/main.js"></script>
 
