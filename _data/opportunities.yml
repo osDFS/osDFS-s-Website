@@ -9,10 +9,10 @@
 #  location: Where
 #  description: Important info ie overview, alternative deadlines, travel grants available
 
-- title: Opening Ceremoney
+- title: Opening Ceremony
   click: Know About osDFS
   url: #
   date:  December 10th, 2019
   location: Not Available
-  description: osDFS will be live on 10th December. You should know about osDFS that what they provide.
+  description: osDFS will be live on 10th December. You will know about osDFS that what osDFS are providing.
 
