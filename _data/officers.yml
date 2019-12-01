@@ -58,3 +58,31 @@
       url: mailto:ruchika8872@gmail.com
     - title: linkedin
       url: https://www.linkedin.com/in/ruchika-99a3a0154
+
+- name: Yuvraj Mishra
+  position: Curriculum Developer
+  modal: yuvraj 
+  pic: Yuvraj
+  college: Birla Institute of Technology, Mesra
+  year: 2nd
+  major: Mathematics & Computing
+  dog: 2
+  social: 
+     - title: envelope
+       url: mailto:myuvraj399@gmail.com
+     - title: linkedin
+       url: https://www.linkedin.com/in/yuvraj-mishra-889552188
+
+- name: Rubina 
+  position: Community Partnerships and Outreach chair
+  modal: rubina
+  pic: Rubina
+  college: Amritsar College of Engineering and Technology
+  year: 4th
+  major: Computer Science
+  dog: 2
+  social:
+     - title: envelope
+       url: mailto:rubinamkr@gmail.com
+     - title: linkedin
+       url: https://www.linkedin.com/in/rubina-makkar-74b16a177
