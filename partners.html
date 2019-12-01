@@ -1,0 +1,55 @@
+---
+layout: default
+title: Partners
+subtitle: Know about our Supporters
+permalink: /partners/
+---
+
+<div class="container partners">
+  <div class="row centered">
+    {% for partner in site.data.partners %}
+    <div class="col-lg-3 col-md-3 col-sm-6 partner">
+      <div class="avatar-container" href="#{{ partner.modal }}Modal" data-toggle="modal">
+        <img class="img-circle" src="{{ site.baseurl }}/img/partners/{{ partner.pic }}.jpg" />
+        <h4>{{ partner.name }}</h4>
+        <h5>{{ partner.position }}</h5>
+      </div>
+      <p>
+        {% for network in partner.social %}
+        <a href="{{ network.url }}">
+          <i class="fa fa-{{ network.title }}"></i>
+        </a>
+        {% endfor %}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% for partner in site.data.partners %}
+<div class="modal fade" id="{{ partner.modal }}Modal" tabindex="-1" role="dialog" aria-labelledby="{{ partner.modal }}Modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img class="img-circle" src="{{ site.baseurl }}/img/partners/{{ partner.pic }}.jpg" />
+        <div class="officer-title">
+          <h1>{{ partner.name }}</h1>
+          <h3>{{ partner.position }}
+                <span class="modal-links">
+                  {% for network in partner.social %}
+                  <a href="{{ network.url }}">
+                    <i class="fa fa-{{ network.title }}"></i>
+                  </a>
+                  {% endfor %}
+                </span>
+              </h3>
+        </div>
+
+      </div> 
+    </div>
+  </div>
+</div>
+{% endfor %}
