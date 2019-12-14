@@ -31,6 +31,20 @@
     - title: linkedin
       url: https://www.linkedin.com/in/md-abdal-khan-976192194/
 
+- name: Ruchika
+  position: Vice President & Outreach Chair
+  modal: ruchika
+  pic: Ruchika
+  college: Amritsar College of Engineering and Technology
+  year: 4th
+  major: Computer Science Engeneering
+  dog: 4
+  social:
+    - title: envelope
+      url: mailto:ruchika8872@gmail.com
+    - title: linkedin
+      url: https://www.linkedin.com/in/ruchika-99a3a0154
+
 - name: Shubhendu Mishra
   position: Treasurer & Content Chair
   modal: shubhendu
@@ -44,20 +58,6 @@
       url: mailto:mshubhendu9@gmail.com
     - title: linkedin
       url: https://www.linkedin.com/in/shubhendu-mishra-723145198/
-
-- name: Ruchika
-  position: Outreach Chair
-  modal: ruchika
-  pic: Ruchika
-  college: Amritsar College of Engineering and Technology
-  year: 4th
-  major: Computer Science Engeneering
-  dog: 4
-  social:
-    - title: envelope
-      url: mailto:ruchika8872@gmail.com
-    - title: linkedin
-      url: https://www.linkedin.com/in/ruchika-99a3a0154
 
 - name: Yuvraj Mishra
   position: Curriculum Developer
