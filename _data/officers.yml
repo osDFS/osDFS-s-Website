@@ -59,22 +59,8 @@
     - title: linkedin
       url: https://www.linkedin.com/in/shubhendu-mishra-723145198/
 
-- name: Yuvraj Mishra
-  position: Curriculum Developer
-  modal: yuvraj 
-  pic: Yuvraj
-  college: Birla Institute of Technology, Mesra
-  year: 2nd
-  major: Mathematics & Computing
-  dog: 2
-  social: 
-     - title: envelope
-       url: mailto:myuvraj399@gmail.com
-     - title: linkedin
-       url: https://www.linkedin.com/in/yuvraj-mishra-889552188
-
 - name: Rubina 
-  position: Community Partnerships and Outreach chair
+  position: Community Partnerships & Outreach chair
   modal: rubina
   pic: Rubina
   college: Amritsar College of Engineering and Technology
