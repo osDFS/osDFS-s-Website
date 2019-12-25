@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to the osDFS"
 author: "osDFS"
-img: footer.jpg
+img: footer.png
 ---
 
 ## Welcome to the osDFS
