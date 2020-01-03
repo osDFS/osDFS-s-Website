@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>osDFS | Fix npm vulnerabilities with yarn</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+<meta name="keywords" content="osDFS, Open Source, Digital Freedom Society, Men, Women, Technology, Computer Science, Information Science" />
+<meta name="author" content="osDFS" />
+<meta name="description" content="We are an off campus community that supports men & women that are interested in computer and information science and all things tech." />
+<meta property="og:description" content="We are an off campus community that supports men & women that are interested in computer and information science and all things tech." />
+<meta property="og:image" content="#" />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:title" content="osDFS | Open Source Digital Freedom Society" />
+<meta property="og:url" content=" http://osdfs.in/" />
+<meta property="og:type" content="website" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/img/assets/logo.png" />
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/">Home</a></li>
+        <li ><a href="/officers">Officers</a></li>
+        <li ><a href="/partners">Partners</a></li>
+        <li ><a href="/events">Events</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opportunities <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="/opportunities">All Opportunities</a></li>
+            <li ><a href="/tech-challenge">Tech Challenges</a></li>
+          </ul>
+        </li>
+        <li ><a href="/gallery">Gallery</a></li>
+        <li class="active"><a href="/blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CONTACT <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="/contact">Message</a></li>
+            <li><a target="_blank" href="https://docs.google.com/forms/d/1PIDsgK_VC74JgNAdRo-iicOk2h0Hh6CZXncXLSoEPYw/">Feedback Form</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div id="post">
+  <div class="container">
+    <div class="row">
+      <div class="post-content">
+        <h1>Fix npm vulnerabilities with yarn</h1>
+        <div class="post-info-wrapper">
+          <p class="author">By Rohit on December 29, 2019</p>
+        </div>
+        <hr />
+        <p><p>Sometimes I get alerts on GitHub because my project’s <code class="highlighter-rouge">npm</code> packages have security issues. With npm you can use <code class="highlighter-rouge">npm audit fix</code> to update your packages. But what about <code class="highlighter-rouge">yarn</code>?
+Yarn also has a command for auditing packages: <code class="highlighter-rouge">yarn audit</code>
+This command shows a list of vulnerable packages. But there is no <code class="highlighter-rouge">yarn audit fix</code> ! So, as of now, it appears that there is no <code class="highlighter-rouge">yarn audit --fix</code>, so I am trying to figure out how to go about fixing my <code class="highlighter-rouge">yarn audit</code> errors. I have tried a <code class="highlighter-rouge">yarn upgrade</code> which has fixed some of the errors (which is great), but there are still several remaining. I have tried a <code class="highlighter-rouge">yarn add &lt;pakage&gt;@latest</code> for the remaining high vulnerabilities, but it upgrades the version in my <code class="highlighter-rouge">package.json</code>, when I think the issues is coming from a dependency of a package that I am using. Here is an example of some of my remaining errors:</p>
+
+<pre><code class="language-bah">$ yarn audit
+yarn audit v1.19.1
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ moderate      │ Cross-Site Scripting                                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ serialize-javascript                                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=2.1.1                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; terser-webpack-plugin &gt; serialize-javascript │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1426                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ moderate      │ Denial of Service                                            │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ handlebars                                                   │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=4.4.5                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; jest &gt; jest-cli &gt; @jest/core &gt;               │
+│               │ @jest/reporters &gt; istanbul-reports &gt; handlebars              │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1300                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ high          │ Arbitrary Code Execution                                     │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ handlebars                                                   │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=4.5.2                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; jest &gt; jest-cli &gt; @jest/core &gt;               │
+│               │ @jest/reporters &gt; istanbul-reports &gt; handlebars              │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1316                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ high          │ Arbitrary Code Execution                                     │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ handlebars                                                   │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=4.5.3                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; jest &gt; jest-cli &gt; @jest/core &gt;               │
+│               │ @jest/reporters &gt; istanbul-reports &gt; handlebars              │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1324                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ high          │ Prototype Pollution                                          │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ handlebars                                                   │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=4.5.3                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; jest &gt; jest-cli &gt; @jest/core &gt;               │
+│               │ @jest/reporters &gt; istanbul-reports &gt; handlebars              │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1325                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ moderate      │ Cross-Site Scripting                                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ serialize-javascript                                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ &gt;=2.1.1                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ react-scripts                                                │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ react-scripts &gt; webpack &gt; terser-webpack-plugin &gt;            │
+│               │ serialize-javascript                                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://www.npmjs.com/advisories/1426                        │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+6 vulnerabilities found - Packages audited: 904851
+Severity: 3 Moderate | 3 High
+Done in 4.62s.
+</code></pre>
+
+<p>Here is an answer I found:</p>
+<ul>
+  <li>The solution to this problem in yarn is called <code class="highlighter-rouge">selective version resolution</code> which is basically defining resolutions for the <code class="highlighter-rouge">transitive dependencies</code> in the <code class="highlighter-rouge">package.json</code>.</li>
+  <li>The transitive dependencies are the dependencies of dependencies.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
+<span class="s2">"resolutions"</span>: <span class="o">{</span> <span class="s2">"**/**/lodash"</span>: <span class="s2">"^4.17.12"</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>So here even if the <code class="highlighter-rouge">lodash</code> isn’t a direct dependency of your package, the dependent package in your package uses the version defined in the resolutions. Specific resolutions can also be provided.
+Here is the yarn documentation about <a href="https://yarnpkg.com/lang/en/docs/selective-version-resolutions/">selective dependency resolutions</a>.</p>
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="/blog">
+  <div id="backToBlog">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h3>Back to Blog</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+
+    <div id="footer">
+  <div class="container">
+    <div class="row">
+      <br>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h4>Made with<i class="fa fa-heart"></i>at</h4>
+        <p>
+          <a href="#" target="blank">
+            <img class="ccis-logo" src="/img/assets/khoury-ccis1200x300.png">
+          </a>
+        </p>
+        <p class="copyright">&copy; osDFS 2019</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h4>Upcoming events</h4>
+        <ul>
+          
+          <li><a href="/events" target="_blank">osDFS Launching</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4>Connect With Us</h4>
+        <a href="https://www.facebook.com/os-DFS-107559480713615" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        <a href="https://twitter.com/dfs_os" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/osdfs1" target="_blank"><i class="fa fa-instagram"></i>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+  </body>
+</html>
