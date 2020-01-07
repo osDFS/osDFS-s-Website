@@ -108,4 +108,4 @@ Here is an answer I found:
 ```
 
 So here even if the `lodash` isn’t a direct dependency of your package, the dependent package in your package uses the version defined in the resolutions. Specific resolutions can also be provided.
-Here is the yarn documentation about [selective dependency resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
+You can check the yarn documentation about [selective dependency resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
