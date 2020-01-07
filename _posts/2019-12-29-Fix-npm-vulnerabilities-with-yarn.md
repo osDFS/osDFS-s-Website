@@ -5,11 +5,9 @@ author: "Rohit"
 img: npm.png
 ---
 
- Sometimes I get alerts on GitHub because my project’s `npm` packages have security issues. With npm you can use `npm audit fix` to update your packages. But what about `yarn`?
-Yarn also has a command for auditing packages: `yarn audit`
-This command shows a list of vulnerable packages. But there is no `yarn audit fix` ! So, as of now, it appears that there is no `yarn audit --fix`, so I am trying to figure out how to go about fixing my `yarn audit` errors. I have tried a `yarn upgrade` which has fixed some of the errors (which is great), but there are still several remaining. I have tried a `yarn add <pakage>@latest` for the remaining high vulnerabilities, but it upgrades the version in my `package.json`, when I think the issues is coming from a dependency of a package that I am using. Here is an example of some of my remaining errors:
+ Sometimes we get security alerts on GitHub because our project’s `npm` packages have security issues. With npm we can use `npm audit fix` to update our packages. But if you have used `yarn`, then `yarn` also has a command for auditing packages: `yarn audit` This command shows a list of vulnerable packages. But there is no `yarn audit --fix` ! So, as of now, it appears that there is no `yarn audit --fix`. So I am trying to figure out how to go about fixing my `npm` security bugs `yarn audit` errors. After trying `yarn upgrade`, it has fixed some of the errors in my `npm` packages, but there are still several remaining. I have tried a `yarn add <pakage>@latest` for the remaining high vulnerabilities, but it upgrades the version in our `package.json`, when I think the issues is coming from a dependency of a package that I am using. Here is an example of some of my remaining errors:
 
-```bah
+```
 $ yarn audit
 yarn audit v1.19.1
 ┌───────────────┬──────────────────────────────────────────────────────────────┐
