@@ -78,11 +78,9 @@
           <p class="author">By Rohit on December 29, 2019</p>
         </div>
         <hr />
-        <p><p>Sometimes I get alerts on GitHub because my project’s <code class="highlighter-rouge">npm</code> packages have security issues. With npm you can use <code class="highlighter-rouge">npm audit fix</code> to update your packages. But what about <code class="highlighter-rouge">yarn</code>?
-Yarn also has a command for auditing packages: <code class="highlighter-rouge">yarn audit</code>
-This command shows a list of vulnerable packages. But there is no <code class="highlighter-rouge">yarn audit fix</code> ! So, as of now, it appears that there is no <code class="highlighter-rouge">yarn audit --fix</code>, so I am trying to figure out how to go about fixing my <code class="highlighter-rouge">yarn audit</code> errors. I have tried a <code class="highlighter-rouge">yarn upgrade</code> which has fixed some of the errors (which is great), but there are still several remaining. I have tried a <code class="highlighter-rouge">yarn add &lt;pakage&gt;@latest</code> for the remaining high vulnerabilities, but it upgrades the version in my <code class="highlighter-rouge">package.json</code>, when I think the issues is coming from a dependency of a package that I am using. Here is an example of some of my remaining errors:</p>
+        <p><p>Sometimes we get security alerts on GitHub because our project’s <code class="highlighter-rouge">npm</code> packages have security issues. With npm we can use <code class="highlighter-rouge">npm audit fix</code> to update our packages. But if you have used <code class="highlighter-rouge">yarn</code>, then <code class="highlighter-rouge">yarn</code> also has a command for auditing packages: <code class="highlighter-rouge">yarn audit</code> This command shows a list of vulnerable packages. But there is no <code class="highlighter-rouge">yarn audit --fix</code> ! So, as of now, it appears that there is no <code class="highlighter-rouge">yarn audit --fix</code>. So I am trying to figure out how to go about fixing my <code class="highlighter-rouge">npm</code> security bugs <code class="highlighter-rouge">yarn audit</code> errors. After trying <code class="highlighter-rouge">yarn upgrade</code>, it has fixed some of the errors in my <code class="highlighter-rouge">npm</code> packages, but there are still several remaining. I have tried a <code class="highlighter-rouge">yarn add &lt;pakage&gt;@latest</code> for the remaining high vulnerabilities, but it upgrades the version in our <code class="highlighter-rouge">package.json</code>, when I think the issues is coming from a dependency of a package that I am using. Here is an example of some of my remaining errors:</p>
 
-<pre><code class="language-bah">$ yarn audit
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn audit
 yarn audit v1.19.1
 ┌───────────────┬──────────────────────────────────────────────────────────────┐
 │ moderate      │ Cross-Site Scripting                                         │
@@ -170,7 +168,7 @@ yarn audit v1.19.1
 6 vulnerabilities found - Packages audited: 904851
 Severity: 3 Moderate | 3 High
 Done in 4.62s.
-</code></pre>
+</code></pre></div></div>
 
 <p>Here is an answer I found:</p>
 <ul>
@@ -184,7 +182,7 @@ Done in 4.62s.
 </ul>
 
 <p>So here even if the <code class="highlighter-rouge">lodash</code> isn’t a direct dependency of your package, the dependent package in your package uses the version defined in the resolutions. Specific resolutions can also be provided.
-Here is the yarn documentation about <a href="https://yarnpkg.com/lang/en/docs/selective-version-resolutions/">selective dependency resolutions</a>.</p>
+You can check the yarn documentation about <a href="https://yarnpkg.com/lang/en/docs/selective-version-resolutions/">selective dependency resolutions</a>.</p>
 </p>
       </div>
     </div>
