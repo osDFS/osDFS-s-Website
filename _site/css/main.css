@@ -434,26 +434,26 @@ button:focus {
 ====================================================================
 
 ***/
-#fact .counter {
+.fact-counter {
   background: #3399FF;
   width: 100%;
 }
 
-#member-details .column{
+.member-details .column{
 	margin-bottom:30px;	
 }
 
-#fact-counter{
+.fact-counter{
 	position:relative;
 	padding:0px 0px 0px;
 	width:100%;
 }
 
-#fact-counter .column{
+.fact-counter .column{
 	position:relative;
 }
 
-#fact-counter .column .inner{
+.fact-counter .column .inner{
 	position:relative;
 	padding:35px 5px 20px;
 	text-align:center;
@@ -465,18 +465,18 @@ button:focus {
 	-moz-transition:all 500ms ease;	
 }
 
-#fact-counter .column:hover .inner{
+.fact-counter .column:hover .inner{
 	background:#1c1c1c;
 }
 
-#fact-counter .column .icon{
+.fact-counter .column .icon{
 	position:relative;
 	color:#ffffff;
 	font-size:64px;
 	line-height:50px;
 }
 
-#fact-counter .column .count-text{
+.fact-counter .column .count-text{
 	position:relative;
 	font-size:48px;
 	font-weight:700;
@@ -485,7 +485,7 @@ button:focus {
 	color:#ffffff;
 }
 
-#fact-counter .column .counter-title{
+.fact-counter .column .counter-title{
 	position:relative;
 	font-size:14px;
 	font-weight:700;
@@ -495,11 +495,11 @@ button:focus {
 	margin:25px 0px 20px;
 }
 
-#info-list li{
+.info-list li{
 	margin-bottom:5px;	
 }
 
-#info-list strong{
+.info-list strong{
 	display:inline-block;
 	min-width:120px;
 	font-weight:700;
