@@ -38,18 +38,6 @@
         - title: linkedin
           url: https://www.linkedin.com/in/rishika-sharma-067286194/
 
-- name: Shubhendu Mishra
-  modal: shubhendu
-  pic: Shubhendu
-  college: Birla Institute of Technology, Mesra
-  major: Mathematics & Computing
-  dog: 2
-  social: 
-        - title: envelope
-          url: mailto:mshubhendu9@gmail.com
-        - title: linkedin
-          url: https://www.linkedin.com/in/shubhendu-mishra-723145198/
-
 - name: Rubina 
   modal: rubina
   pic: Rubina
