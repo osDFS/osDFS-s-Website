@@ -50,4 +50,15 @@
      - title: linkedin
        url: https://www.linkedin.com/in/rubina-makkar-74b16a177
 
-
+- name: Jessica Massey
+  modal: jessica 
+  pic: Jessica
+  college: Delhi University
+  major: 
+  dog: 4
+  social:
+    - title: envelope
+      url: mailto:codespirited@gmail.com
+    - title: linkedin
+      url: https://www.linkedin.com/in/jessica-massey-a36760178
+      
