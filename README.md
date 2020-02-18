@@ -65,9 +65,9 @@ See the [jekyll Documentation](https://jekyllrb.com/docs/)
 
 This site is built on a static site generator called [Jekyll](https://jekyllrb.com/). So first, check out Jekyll's [quick start guide](https://jekyllrb.com/docs/quickstart/) and [installation docs](https://jekyllrb.com/docs/installation/). 
 After you have installed Jekyll and all it's dependencies, open up your terminal window and then:
-- `https://github.com/TeAmP0is0N/GirlsInTech.git` OR
-   `git@github.com:TeAmP0is0N/GirlsInTech.git`
-- `cd GirlsInTech`
+- `https://github.com/TeAmP0is0N/osDFS-s-Website.git` OR
+   `git@github.com:TeAmP0is0N/osDFS-s-Website.git`
+- `cd osDFS-s-Website`
 - `bundle install`
 - `bundle exec jekyll serve` (this command watches for local changes automatically)
 - Open up a browser and go to `localhoest:4000`
