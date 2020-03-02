@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TeAmP0is0N/osDFS-s-Website) 
+
 # osDFS
 
 Open Source Digital Freedom Society
