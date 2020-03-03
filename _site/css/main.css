@@ -427,6 +427,18 @@ button:focus {
   padding: 0 15px;
 }
 
+/* =================== Basic ========================= */
+.text-center .col-md-4 p,
+.text-center .col-md-4 li {
+	text-align: left;
+}
+
+.container .row img {
+	width: 100px;
+	max-height: 100px;
+	margin-top: 20px;
+}
+
 /*====================================================================
 	Fact Counter Style
 ====================================================================*/
